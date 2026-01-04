@@ -1,0 +1,25 @@
+body{
+    background-color: black;
+    color: white;
+}
+
+a{
+    color: cyan;
+}
+
+a:hover{
+    color: orange;
+}
+
+a:active{
+    color: yellowgreen;
+}
+
+h1{
+    font-size: 3em;
+}
+
+h1:hover{
+    font-style: oblique;
+    color: aqua;
+}
