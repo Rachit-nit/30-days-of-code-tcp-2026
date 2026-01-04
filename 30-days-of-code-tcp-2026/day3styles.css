@@ -1,15 +1,69 @@
-body{
-    background-color: black;
-    color: white;
+:root {
+    --primary-color: cyan;
+    --accent-color: orange;
+    --bg-color: black;
+    --text-color: white;
 }
 
-a{
-    color: cyan;
+@media (max-width: 768px) {
+    header {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    #featureSec {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .priceDiv {
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    article,
+    #basic, #standard, #pro {
+        width: 80%;
+    }
+
+    a {
+        font-size: 20px;
+    }
 }
 
-a:hover{
-    color: orange;
+
+body {
+    background-color: var(--bg-color);
+    color: var(--text-color);
 }
+
+a {
+    color: var(--primary-color);
+}
+a:hover {
+    color: var(--accent-color);
+}
+
+
+
+
+header{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+svg{
+    margin-right: 10px;
+}
+
+
+.logoDiv{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
 
 a:active{
     color: yellowgreen;
@@ -21,5 +75,60 @@ h1{
 
 h1:hover{
     font-style: oblique;
-    color: aqua;
+}
+
+#featureSec{
+    display: flex;
+    column-gap: 20px;
+}
+
+.fade-in {
+    font-size: 2em;
+    color: whitesmoke;
+    background-color: gray;
+    border-radius: 15px;
+    border: none;
+    margin-bottom: 15px;
+    animation-name: fadeInOpacity;
+    animation-duration: 2s; 
+    animation-timing-function: ease-in;
+    animation-fill-mode: forwards; 
+}
+
+@keyframes fadeInOpacity {
+    0% {
+    opacity: 0;
+    }
+    100% {
+    opacity: 1;
+    }
+}
+
+
+article{
+    border: 2px solid var(--primary-color);
+    height: 25%;
+    width: 25%;
+    border-radius: 10%;
+}
+
+article:hover{
+    box-shadow: var(--primary-color) 0px 30px 60px -12px inset, var(--primary-color) 0px 18px 36px -18px inset;
+}
+
+.priceDiv{
+    display: flex;
+    justify-content: space-between;
+}
+
+#basic,#standard,#pro{
+    border: 2px solid var(--primary-color);
+    border-radius: 10%;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+
+#basic:hover, #standard:hover, #pro:hover {
+    transform: scale(1.05);
+    box-shadow: 0 0 15px var(--primary-color);
 }
